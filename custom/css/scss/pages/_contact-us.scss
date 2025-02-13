@@ -1,0 +1,59 @@
+.contact-us {
+    padding: 50px 0;
+    &__item {
+        border: 2px solid var(--secondary-color);
+        border-radius: 5px;
+        overflow: hidden;
+        height: 100%;
+        .item-header {
+            padding: 8px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--c-white);
+
+            &.live-chat {
+                background: #54AA00;
+            }
+            &.whatsapp {
+                background: #00AB18;
+            }
+            &.messenger {
+                background: #3B5998;
+            }
+            &.line {
+                background: #00B900;
+            }
+            &.skype {
+                background: #0FB3E6;
+            }
+            &.email {
+                background: #E0861A;
+            }
+            &.wechat {
+                background: #09B83E;
+            }
+            &.telegram {
+                background: #0FB3E6;
+            }
+            &.contact-number {
+                background: #54AA00;
+            }
+        }
+        .item-content {
+            background: var(--c-white);
+            color: var(--c-black);
+            text-align: center;
+            height: 100%;
+            padding: 10px 10px;
+
+            .title {
+                font-size: 15px;
+                font-weight: 700;
+                margin-bottom: 3px;
+            }
+            .description {
+                font-size: 12px;
+            }
+        }
+    }
+}

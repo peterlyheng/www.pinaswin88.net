@@ -1,0 +1,11 @@
+.freebet
+{
+	min-height: 100vh;
+	.freebet__holder
+	{
+		background: var(--background-page);
+		border: 2px solid var(--secondary-color);
+		padding: 20px;
+		border-radius: 5px;
+	}
+}

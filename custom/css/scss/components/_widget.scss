@@ -1,0 +1,237 @@
+.global-mobile-category {
+    color: var(--primary-text);
+    margin: 15px 0;
+
+    .category-container {
+        background: var(--primary-color);
+        padding: 10px 10px 0;
+        border-radius: 15px;
+
+        @media screen and (min-width: 768px) {
+            padding: 10px;
+        }
+
+        .mCustomScrollBox {
+            height: auto;
+        }
+
+        .mCSB_container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            grid-gap: 3px;
+            margin-bottom: 10px;
+        }
+
+        .mCSB_scrollTools_horizontal {
+            bottom: -3px;
+        }
+
+        .mCSB_dragger_bar {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .category-item {
+            background: #262A3B;
+            color: var(--c-white);
+            border-radius: 15px;
+            padding: 10px 5px 8px;
+            text-align: center;
+            min-width: 70px;
+            max-width: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .item-icon {
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                    object-position: center;
+                    display: flex;
+                    margin: auto;
+                }
+            }
+
+            .item-name {
+                margin-top: 7px;
+                font-size: 11px;
+                font-weight: 600;
+                color: var(--c-white);
+            }
+        }
+    }
+}
+
+.global-mobile-balance {
+    margin: 15px 0 10px;
+
+    .balance-cont {
+        background: var(--primary-color);
+        color: var(--primary-text);
+        border-radius: 10px;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: fit-content(100%) fit-content(100%);
+        grid-gap: 2px;
+        justify-content: space-between;
+
+        .balance-left {
+            align-self: center;
+            position: relative;
+
+            .balance-profile {
+                font-size: 9px;
+
+                .username {
+                    font-weight: 700;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+
+                img {
+                    width: 18px;
+                }
+            }
+
+            .balance-amount {
+                display: flex;
+                align-items: center;
+
+                .wallet-amount {
+                    font-weight: 700;
+                    color: #FAC900;
+                    margin-bottom: 0;
+                    margin-right: 5px;
+                    font-size: 15px;
+                    white-space: nowrap;
+
+                    .spinner-border {
+                        vertical-align: inherit !important;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        white-space: nowrap;
+                        max-width: 140px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    @media screen and (max-width: 375px) {
+                        max-width: 100px;
+                    }
+                }
+
+                .refresh-amount {
+                    color: var(--c-white);
+                    background: var(--secondary-color);
+                    border-radius: 25px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .wallet-popup {
+                position: absolute;
+                left: 0;
+                top: 50px;
+                z-index: 999;
+                border-radius: 10px;
+                overflow: hidden;
+                width: auto;
+                white-space: nowrap;
+                font-weight: 700;
+                display: none;
+                color: var(--header-text);
+                border: 1px solid rgba(255,255,255,0.1);
+
+                .title {
+                    margin-right: 10px;
+                }
+
+                .wallet-info {
+                    padding: 7px 12px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 11px;
+
+                    &.main-wallet {
+                        background: var(--primary-color);
+                    }
+
+                    &.poker-wallet {
+                        background: var(--navbar-color);
+                    }
+
+                    span {
+                        color: #FAC900;
+                        margin-left: auto;
+                        min-width: 60px;
+                        cursor: pointer;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 50px;
+                        text-decoration: underline;
+
+                        &.active {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .balance-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-self: center;
+            grid-gap: 5px;
+            padding: 5px 0;
+
+            &.nav-tabs {
+                border-bottom: 0;
+            }
+
+            @media screen and (min-width: 375px) {
+                flex-wrap: nowrap;
+            }
+
+            a {
+                color: var(--c-white);
+            }
+
+            .nav-item {
+                display: flex;
+                justify-content: center;
+
+                .item-icon {
+                    text-align: center;
+                    background: rgba(255,255,255,0.1);
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 40px;
+
+                    img {
+                        filter: invert(1);
+                        width: 18px;
+                        height: 18px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

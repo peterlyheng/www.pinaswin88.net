@@ -1,0 +1,451 @@
+.profile
+{
+	&__tab {
+		.nav {
+			background: var(--background-page);
+			border-radius: 15px;
+			padding: 0 15px;
+			margin-bottom: 20px;
+			grid-gap: 100px;
+			justify-content: center;
+			flex-wrap: nowrap;
+			overflow: auto;
+
+			&-link {
+				border: 0;
+				background: transparent;
+				color: var(--page-text);
+				font-weight: 600;
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+				margin-bottom: 0;
+				padding: 15px 10px;
+				position: relative;
+				white-space: nowrap;
+
+				&:before {
+					position: absolute;
+					content: '';
+					height: 2px;
+					background: var(--secondary-color);
+					width: 100%;
+					bottom: 0;
+					left: 0;
+					transform: scale(0);
+					font-weight: 600;
+					@include transition(0.2s);
+				}
+
+				&:hover {
+					color: var(--secondary-color);
+
+					&:before {
+						transform: scale(1);
+						@include transition(0.2s);
+					}
+				}
+
+				&.active {
+					background: transparent;
+					color: var(--secondary-color);
+
+					&:before {
+						transform: scale(1);
+					}
+				}
+			}
+
+			@media screen and (max-width: 425px) {
+				justify-content: flex-start;
+				border-radius: 5px;
+				grid-gap: 20px;
+
+				&-link {
+					font-size: 13px;
+					padding: 10px;
+				}
+			}
+		}
+
+		.page-form {
+			border-radius: 0 0 15px 15px;
+		}
+
+		.profile-tab__holder {
+			.tab-header {
+				background: var(--secondary-color);
+				color: var(--secondary-text);
+				padding: 10px 20px;
+				border-radius: 15px 15px 0 0;
+				font-size: 20px;
+				font-weight: 500;
+
+				@media screen and (max-width: 800px) {
+					font-size: 16px;
+					padding: 8px 20px;
+				}
+			}
+
+			&.my-account {
+				.my-account__holder {
+					background: var(--background-page);
+					color: var(--page-text);
+					border-radius: 15px;
+					padding: 15px;
+
+					&.my-account__info {
+						height: 100%;
+						display: flex;
+						align-items: center;
+
+						.profile-status {
+							@extend .profile-item;
+				
+							.status-content {
+								display: flex;
+								align-items: center;
+					
+								h5 {
+									margin-bottom: 0;
+									font-size: 18px;
+								}
+							}
+				
+							.status-medal {
+								margin-left: auto;
+
+								img {
+									width: 40px;
+									object-fit: contain;
+								}
+							}
+						}
+				
+						.profile-item {
+							background: #262A3B;
+							color: var(--page-text);
+							margin-bottom: 8px;
+							border-radius: 10px;
+							padding: 10px 15px;
+							display: flex;
+							align-items: center;
+							min-height: 65px;
+
+							.item-icon {
+								width: 40px;
+								height: 40px;
+								border-radius: 25px;
+								background: rgba(0,0,0,0.8);
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								margin-right: 10px;
+
+								i {
+									font-size: 17px;
+								}
+							}
+				
+							h5 {
+								margin-bottom: 0;
+								font-size: 18px;
+							}
+				
+							#refferalCode {
+								font-size: 18px;
+							}
+
+							#dateOfBirth {
+								.btn-custom-sm {
+									max-width: 160px;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+
+								.custom-textfield {
+									max-width: 160px;
+								}
+							}
+						}
+
+						@media screen and (max-width: 425px) {
+							.status-content {
+								h5 {
+									font-size: 13px !important;
+								}
+							}
+
+							.profile-item {
+								min-height: 50px;
+
+								.item-icon {
+									width: 30px;
+									height: 30px;
+
+									i {
+										font-size: 13px;
+									}
+								}
+
+								h5 {
+									font-size: 14px;
+								}
+							}
+						}
+					}
+
+					&.my-account__bank {
+						padding: 15px 15px 10px;
+
+						.bank-header {
+							display: flex;
+							align-items: center;
+							margin-bottom: 15px;
+							min-height: 33px;
+
+							h5 {
+								margin-bottom: 0;
+							}
+
+							.btn-custom-sm {
+								margin-left: auto;
+							}
+						}
+
+						.profile-bank-swiper {
+							padding-bottom: 20px;
+
+							.bank-details {
+								background: #262A3B;
+								border-radius: 15px;
+								padding: 10px 15px;
+								cursor: pointer;
+
+								.acc-info {
+									display: flex;
+									align-items: center;
+									font-weight: 500;
+									margin-bottom: 5px;
+
+									.bank-holder {
+										font-size: 17px;
+									}
+
+									.bank-type {
+										margin-left: auto;
+										font-size: 10px;
+										background: rgba(0,0,0,0.3);
+										border-radius: 50px;
+										padding: 5px 10px;
+									}
+								}
+
+								.acc-number {
+									font-size: 23px;
+									font-weight: 600;
+									border-bottom: 2px solid rgba(0,0,0,0.3);
+									padding-bottom: 5px;
+									letter-spacing: 8px;
+									color: var(--secondary-color);
+								}
+
+								.acc-bank {
+									margin-top: 10px;
+									display: flex;
+									align-items: center;
+
+									.bank-name {
+										font-weight: 500;
+									}
+
+									.bank-icon {
+										margin-left: auto;
+
+										img {
+											height: 30px;
+											object-fit: contain;
+											filter: brightness(500%) grayscale(1);
+										}
+									}
+								}
+							}
+
+							.swiper-pagination {
+								bottom: -6px;
+
+								.swiper-pagination-bullet {
+									border-radius: 50px;
+									width: 20px;
+									height: 6px;
+									background: rgba(255,255,255,0.3);
+
+									&.swiper-pagination-bullet-active {
+										background: var(--secondary-color);
+									}
+								}
+							}
+						}
+					}
+
+					&.my-account__content {
+						margin-top: 15px;
+
+						.content-provision {
+							color: var(--c-white);
+				
+							@media screen and (max-width: 425px) {
+								padding: 10px;
+							}
+				
+							.provision-title {
+								font-size: 16px;
+								font-weight: 600;
+							}
+				
+							.provision-content {
+								padding-left: 18px;
+								margin-bottom: 0;
+								margin-top: 5px;
+				
+								li {
+									font-size: 14px;
+									margin-bottom: 5px;
+								}
+							}
+				
+							.provision-medal {
+								margin: 20px 0 40px;
+								text-align: center;
+								display: grid;
+								grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+								grid-gap: 20px;
+				
+								.medal-item {
+									cursor: pointer;
+									img {
+										@include transition(0.2s);
+										width: 100px;
+										height: 90px;
+										object-fit: contain;
+									}
+				
+									.medal-name {
+										background: #272727;
+										font-size: 14px;
+										font-weight: 600;
+										border-radius: 25px;
+										padding: 8px 10px;
+										text-align: center;
+										position: relative;
+										top: 20px;
+									}
+				
+									&:hover {
+										img {
+											@include transition(0.2s);
+											transform: translateY(-8px);
+										}
+									}
+				
+									&.bronze {
+										background: linear-gradient(to bottom, rgba(241,178,127,0) 0%, rgba(241,178,127,1) 100%);
+									}
+				
+									&.silver {
+										background: linear-gradient(to bottom, rgba(241,178,127,0) 0%, rgba(128,130,188,1) 100%);
+									}
+				
+									&.gold {
+										background: linear-gradient(to bottom, rgba(241,178,127,0) 0%, rgba(252,193,44,1) 100%);
+									}
+				
+									&.platinum {
+										background: linear-gradient(to bottom, rgba(241,178,127,0) 0%, rgba(227,59,59,1) 100%);
+									}
+				
+									&.hunter {
+										background: linear-gradient(to bottom, rgba(241,178,127,0) 0%, rgba(144,127,243,1) 100%);
+									}
+								}
+							}
+				
+							.medal-description {
+								padding-left: 18px;
+								margin-bottom: 0;
+				
+								li {
+									font-size: 14px;
+									margin-bottom: 5px;
+				
+									span {
+										font-weight: 600;
+									}
+								}
+							}
+						}
+					}
+
+					@media screen and (max-width: 800px) {
+						&.my-account__bank {
+							margin-top: 15px;
+						}
+					}
+				}
+			}
+
+			&.game-user {
+				.game-user-details {
+					max-width: 550px;
+					margin: auto;
+
+					.form-group {
+						.title {
+							font-size: 14px;
+							font-weight: 600;
+							margin-bottom: 3px;
+						}
+					}
+
+					.game-user-button {
+						display: flex;
+						justify-content: center;
+
+						.btn-custom {
+							min-width: 120px;
+							margin: 0 5px;
+						}
+					}
+				}
+			}
+
+			&.change-password {
+				.change-password-form {
+					max-width: 550px;
+					margin: auto;
+
+					.form-group {
+						margin-bottom: 18px;
+
+						.title {
+							font-size: 14px;
+							font-weight: 600;
+							margin-bottom: 3px;
+						}
+
+						label {
+							float: right;
+						}
+					}
+
+					.change-password-button {
+						.btn-custom {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

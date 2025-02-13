@@ -1,0 +1,132 @@
+.memo-view
+{
+	.memo-view__container
+	{
+		.memo-view-form
+		{
+			background: var(--background-page);
+			border: 2px solid var(--secondary-color);
+			padding: 20px;
+			border-radius: 15px;
+			margin-top: 20px;
+			.memo-view-content
+			{
+				padding: 15px 20px;
+				background: rgba(0,0,0,0.5);
+				border-radius: 15px;
+				.content-subject
+				{
+					font-size: 17px;
+					font-weight: 600;
+					color: var(--secondary-color);
+				}
+				.content-desc
+				{
+					color: var(--c-white);
+					font-size: 13px;
+					margin-top: 10px;
+				}
+			}
+			.memo-view-reply
+			{
+				padding: 15px 20px;
+				background: rgba(0,0,0,0.5);
+				margin-top: 20px;
+				border-radius: 15px;
+				.reply-top
+				{
+					display: flex;
+					align-items: center;
+					.reply-avatar
+					{
+						color: var(--c-white);
+						i
+						{
+							font-size: 45px;
+						}
+					}
+					.reply-user-info
+					{
+						margin-left: 10px;
+						.reply-user
+						{
+							color: var(--c-white);
+							font-size: 16px;
+							font-weight: 600;
+							display: flex;
+							align-items: center;
+							span
+							{
+								background: var(--secondary-color);
+								color: var(--secondary-text);
+								font-weight: 700;
+								margin-right: 5px;
+								font-size: 11px;
+								padding: 2px 8px;
+								border-radius: 4px;
+								margin-left: 5px;
+							}
+						}
+						.reply-days
+						{
+							color: #DF931B;
+							font-size: 11px;
+							font-weight: 600;
+							margin-top: 3px;
+							i
+							{
+								margin-right: 3px;
+							}
+						}
+					}
+				}
+				.reply-desc
+				{
+					color: var(--c-white);
+					font-size: 13px;
+					margin-top: 10px;
+				}
+			}
+			.memo-reply-form
+			{
+				margin-top: 20px;
+				textarea
+				{
+					min-height: 300px;
+					max-height: 300px;
+					font-size: 13px;
+					font-weight: 600;
+					border-radius: 15px;
+				}
+				.reply-form-code
+				{
+					display: flex;
+					align-items: center;
+					margin-top: 15px;
+					label
+					{
+						font-size: 13px;
+						font-weight: 800;
+						margin-right: 10px;
+						color: var(--page-text);
+						margin-bottom: 0;
+					}
+					img
+					{
+						margin-right: 15px;
+					}
+					.input-code
+					{
+						max-width: 170px;
+						font-size: 13px;
+						font-weight: 600;
+					}
+				}
+				.btn-reply
+				{
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}

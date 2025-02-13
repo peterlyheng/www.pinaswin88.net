@@ -1,0 +1,41 @@
+.paginationjs
+{
+    margin-top: 15px;
+    float: right;
+    .paginationjs-pages
+    {
+        li > a
+        {
+            background: var(--secondary-color) !important;
+        }
+        li
+        {
+            border: 1px solid rgba(0,0,0,0.3) !important;
+            border-right: 0 !important;
+            &.active
+            {
+                a
+                {
+                    height: 28px !important;
+                    line-height: 28px !important;
+                    color: var(--c-white) !important;
+                    font-weight: 600;
+                    background: #5cb85c !important;
+                }
+            }
+            &:hover
+            {
+                a
+                {
+                    background: #5cb85c !important;
+                    font-weight: 600;
+                    color: var(--c-white) !important;
+                }
+            }
+            &.paginationjs-next
+            {
+                border-right: 1px solid rgba(0,0,0,0.3) !important;
+            }
+        }
+    }
+}

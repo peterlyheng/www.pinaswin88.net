@@ -1,0 +1,80 @@
+.casino-game
+{
+	.casino-game__container
+	{
+		.casino-game-item
+		{
+			padding: 10px;
+			border: 1px solid rgba(255,255,255, 0.1);
+			background: var(--c-grey);
+			margin-bottom: 30px;
+			position: relative;
+			.casino-game-img
+			{
+				overflow: hidden;
+				margin-bottom: 10px;
+				img
+				{
+					width: 100%;
+					@include transition(0.2s);
+				}
+			}
+			.casino-game-name
+			{
+				font-weight: 600;
+				color: var(--c-white);
+				display: flex;
+				justify-content: center;
+			}
+			.casino-game-hover
+			{
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				@include transition(0.2s);
+				.casino-play
+				{
+					border-radius: 10px;
+					background: rgba(255,255,255,0.5);
+					padding: 15px 15px 20px;
+					font-size: 45px;
+					font-weight: 700;
+					cursor: pointer;
+					color: var(--c-white);
+					text-shadow: 0 1px 0 rgb(204, 204, 204), 0 2px 0 rgb(201, 201, 201), 0 3px 0 rgb(187, 187, 187), 0 4px 0 rgb(185, 185, 185), 0 5px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
+					@include transition(0.2s);
+					&:hover
+					{
+						color: rgba(180, 180, 180, 1) !important;
+						text-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 2px 0 rgba(255, 255, 255, 1), 0 3px 0 rgba(255, 255, 255, 1), 0 4px 0 rgba(255, 255, 255, 1), 0 5px 0 rgba(255, 255, 255, 1), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
+						@include transition(0.2s);
+					}
+				}
+			}
+			&:hover
+			{
+				.casino-game-img
+				{
+					img
+					{
+						transform: scale(1.05);
+						@include transition(0.2s);
+					}
+				}
+				.casino-game-hover
+				{
+					opacity: 1;
+					@include transition(0.2s);
+				}
+			}
+		}
+	}
+}

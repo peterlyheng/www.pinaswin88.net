@@ -1,0 +1,611 @@
+@media screen and (max-width: 1080px) {
+    .main-content {
+        padding-bottom: 80px !important;
+    }
+
+    .home {
+        padding-bottom: 65px !important;
+    }
+
+    .header {
+        &__top {
+            display: none;
+        }
+
+        &__mid {
+            display: none;
+        }
+
+        &-nav {
+            display: none;
+        }
+
+        &-mobile {
+            display:  block !important;
+            background: var(--navbar-color);
+            color: var(--navbar-text);
+            box-shadow: 0px 0px 20px 5px rgba(0,0,0,1);
+
+            &__top {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                padding: 8px;
+
+                .mobile-button, .mobile-logo, .mobile-chat {
+                    align-self: center;
+                }
+
+                .mobile-logo {
+                    justify-self: center;
+
+                    img {
+                        width: 85px;
+                        height: 70px;
+                    }
+                }
+
+                .mobile-button, .mobile-chat {
+                    img {
+                        width: 25px;
+                        filter: invert(1);
+                    }
+                }
+            }
+
+            &__marquee {
+                background: var(--primary-color);
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                .marquee-icon {
+                    background: var(--primary-color);
+                    padding: 5px 7px;
+
+                    img {
+                        filter: invert(1);
+                        width: 15px;
+                        display: flex;
+                    }
+                }
+
+                .marquee {
+                    font-size: 12px;
+                    font-weight: 600;
+                    width: 100%;
+                }
+            }
+
+            &__login {
+                border-radius: 15px 15px 0 0;
+                background: #161821;
+                filter: drop-shadow(0px 0px 10px black);
+                color: var(--c-white);
+                position: relative;
+    
+                .footer-button {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+    
+                    button {
+                        border: 0;
+                        padding: 10px;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+    
+                    .btn-login {
+                        background: var(--secondary-color);
+                        color: var(--secondary-text);
+                    }
+    
+                    .btn-register {
+                        background: #CE0000;
+                        color: var(--c-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .home {
+        &__jackpot {
+            .jackpot-gif{
+                height: 80px !important;
+                max-width: 500px !important;
+                margin: auto;
+
+                .jackpot-amount{
+                    font-size: 13px !important;
+                    top: 8px !important;
+                }
+            }
+        }
+
+        &__menu {
+            margin-top: 20px;
+
+            .menu-container {
+                grid-template-columns: repeat(1, 1fr) !important;
+
+                .download-border {
+                    max-width: 250px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .menu-download {
+                        height: auto !important;
+
+                        img {
+                            width: 200px;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .menu-right {
+                    .menu-games {
+                        margin: 20px 0 !important;
+                        grid-template-columns: repeat(3, 1fr) !important;
+
+                        .games-item {
+                            img {
+                                width: 180px !important;
+                                max-height: 140px !important;
+                            }
+
+                            .games-border {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+
+                            &.show-mobile {
+                                display: block !important;
+                            }
+                        }
+                    }
+
+                    .menu-slider {
+                        .slider-cstmr {
+                            margin-bottom: 20px;
+                        }
+
+                        .slider-provider {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+
+                .item-download {
+                    grid-area: item-download;
+                }
+
+                .item-right {
+                    grid-area: item-right;
+                }
+
+                grid-template-areas: "item-right item-right"
+                "item-download item-download";
+            }
+        }
+
+        &__payment {
+            .payment-border {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__seo {
+            .seo-content {
+                display: none;
+            }
+
+            .seo-mobile {
+                display: block !important;
+            }
+        }
+    }
+
+    .page-header {
+        font-size: 20px !important;
+        font-size: 24px !important;
+        color: var(--secondary-color) !important;
+    }
+
+    .footer {
+        &__provider {
+            display: none;
+        }
+
+        &__trademark {
+            display: none;
+        }
+
+        &-mobile {
+            display: block !important;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 997;
+
+            .footer-mobile__nav {
+                border-radius: 15px 15px 0 0;
+                background: #161821;
+                filter: drop-shadow(0px 0px 10px black);
+                color: var(--c-white);
+                padding: 15px 10px;
+                position: relative;
+                display: grid !important;
+                grid-template-columns: repeat(5, auto);
+
+                a {
+                    justify-self: center;
+                    margin: 0 5px;
+                }
+    
+                .footer-item {
+                    background: var(--secondary-color);
+                    color: var(--c-white);
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.15s ease-in-out;
+                    border-radius: 50px;
+    
+                    .item-content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        .icon {
+                            display: flex;
+    
+                            i {
+                                font-size: 13px;
+                            }
+
+                            img {
+                                width: 16px;
+                                display: flex;
+                                filter: invert(1);
+                            }
+                        }
+    
+                        .name {
+                            margin-left: 5px;
+                            font-size: 13px;
+                            font-weight: 700;
+                            line-height: 1;
+                            transform: scale(0);
+                            position: absolute;
+                            transition: all 0.15s ease-in-out;
+                        }
+                    }
+    
+                    &.active {
+                        transition: all 0.15s ease-in-out;
+                        
+                        .name {
+                            position: relative;
+                            transform: scale(1);
+                            transform-origin: center center;
+                            transition: all 0.15s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item-right-content {
+        padding-bottom: 100px !important;
+    }
+
+    .floating-contact {
+        bottom: 80px !important;
+        width: 60px !important;
+        height: 60px !important;
+
+        &__item {
+            bottom: 70px !important;
+            width: 190px !important;
+
+            a {
+                font-size: 12px !important;
+
+                span {
+                    width: 25px !important;
+                    height: 25px !important;
+
+                    i {
+                        font-size: 13px !important;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            width: 60px !important;
+            height: 60px !important;
+            border: 2px solid var(--secondary-color);
+        }
+    }
+
+    .transaksi {
+        .component-tab-content {
+            .transaksi-formulir {
+                margin-bottom: 25px !important;
+            }
+        }
+    }
+
+    .lottery {
+        .lottery__container {
+            .lottery-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .promo-content {
+        .main-promo {
+            .promo-img {
+                img {
+                    height: auto !important;
+                }
+            }
+        }
+
+        .other-promo {
+            display: none;
+        }
+    }
+
+    .post {
+        .main-post {
+            .post-img {
+                img {
+                    height: auto !important;
+                }
+            }
+        }
+
+        .other-post {
+            display: none;
+        }
+    }
+
+    .register {
+        .cap-img {
+            flex-direction: column;
+            align-items: flex-start !important;
+
+            .cap-content {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .memo-view {
+        .memo-view-form {
+            padding: 10px !important;
+
+            .memo-view-content {
+                padding: 10px 15px !important;
+
+                .content-subject {
+                    font-size: 14px !important;
+                    text-align: center;
+                }
+
+                .content-desc {
+                    font-size: 12px !important;
+                }
+            }
+
+            .memo-view-reply {
+                padding: 10px 15px !important;
+
+                .reply-top {
+                    .reply-avatar {
+                        i {
+                            font-size: 35px !important;
+                        }
+                    }
+
+                    .reply-user-info {
+                        .reply-user {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+
+                .reply-desc {
+                    font-size: 12px !important;
+                }
+            }
+
+            .memo-reply-form {
+                .reply-form-code {
+                    flex-direction: column;
+                    align-items: flex-start !important;
+
+                    img {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        margin-right: 0;
+                    }
+                }
+
+                .btn-reply {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .home {
+
+        &__jackpot {
+            .jackpot-gif{
+                height: 80px !important;
+
+            }
+        }
+        &__menu {
+            .menu-container {
+                .menu-right {
+                    .menu-games {
+                        grid-template-columns: repeat(2, 1fr) !important;
+
+                        .games-item {
+                            img {
+                                height: 120px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lottery {
+        .lottery__container {
+            .lottery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    }
+
+    .bonus {
+        &-checkbox {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home {
+        &__jackpot {
+            .jackpot-gif{
+                height: 57px !important;
+                .jackpot-amount{
+                    font-size: 10px !important;
+                    top: 8px !important;
+                }
+
+            }
+        }
+        &__menu {
+            margin-top: 20px;
+
+            .menu-container {
+                .menu-right {
+                    .menu-games {
+                        margin: 20px 0 !important;
+                        grid-template-columns: repeat(2, 1fr) !important;
+
+                        .games-item {
+                            img {
+                                width: 130px !important;
+                            }
+
+                            .games-border {
+
+                                .games-name {
+                                    font-size: 14px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .news {
+        &-list {
+            .news-item {
+                flex-direction: column;
+
+                .news-date {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .lottery {
+        .lottery__container {
+            .lottery-grid {
+                .lotto-flag {
+                    img {
+                        width: 50px !important;
+                        height: 30px !important;
+                    }
+                }
+
+                .lotto-country {
+                    font-size: 18px !important;
+                }
+
+                .lotto-date {
+                    font-size: 12px !important;
+                }
+
+                .lotto-number {
+                    font-size: 30px !important;
+                }
+            }
+        }
+    }
+
+    .bonus {
+        .component-tab-content {
+
+            span {
+                margin-right: 10px;
+            }
+
+            .referral-link {
+                flex-wrap: wrap;
+
+                .btn-custom-sm {
+                    margin: 5px 0 10px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .lottery {
+        .lottery__container {
+            .lottery-grid {
+                grid-gap: 15px;
+
+                .lotto-country {
+                    font-size: 17px !important;
+                }
+
+                .lotto-date {
+                    font-size: 10px !important;
+                }
+
+                .lotto-number {
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+
+    .bonus {
+        &-checkbox {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+}

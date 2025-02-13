@@ -1,0 +1,296 @@
+.component
+{
+    &-tabs
+    {
+        border-radius: 3px 3px 0 0;
+        border-bottom: 0 !important;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+
+        .nav-link
+        {
+            background: var(--secondary-color);
+            border: 2px solid var(--secondary-color) !important;
+            color: var(--secondary-text) !important;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 15px;
+            border-radius: 15px !important;
+            min-width: 150px;
+            text-align: center;
+            white-space: nowrap;
+
+            &.active
+            {
+                background: var(--c-black);
+                color: var(--c-white) !important;
+            }
+
+            &:hover
+            {
+                background: var(--c-black);
+                color: var(--c-white) !important;
+                @include transition(0.15s);
+            }
+        }
+
+        @media screen and (max-width: 763px) {
+
+            .nav-item {
+                margin: 0;
+
+                .nav-link {
+                    min-width: 0;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px;
+                    font-size: 11px;
+                    height: 100%;
+                    border-radius: 10px !important;
+                    &:nth-child(1) {
+                        color: red;
+                    }
+
+                    i {
+                        margin-bottom: 2px;
+                        margin-right: 0;
+                    }
+
+                    span {
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+
+    &-tab-content
+    {
+        background: transparent;
+        padding: 20px 0 30px;
+    }
+}
+
+.component-pills-tab
+{
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 7px;
+
+    .filter-tab
+    {
+        text-align: center;
+        background: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        font-size: 14px;
+        padding: 5px 15px;
+        color: var(--secondary-text);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        border-radius: 5px;
+        max-height: 33px;
+        cursor: pointer;
+
+        &:hover
+        {
+            background: var(--c-black);
+            color: var(--c-white);
+            box-shadow: 0 0 15px #fff;
+        }
+    }
+
+    .active
+    {
+        background: var(--c-black);
+        color: var(--c-white);
+    }
+
+    @media screen and (max-width: 1080px) {
+        display: block;
+        margin-top: 10px;
+        padding-bottom: 0;
+
+        .mCSB_container {
+            display: flex;
+            align-items: center;
+            grid-gap: 7px;
+            margin-bottom: 10px !important;
+        }
+
+        .mCSB_scrollTools_horizontal {
+            bottom: -3px;
+        }
+
+        .mCSB_dragger_bar {
+            background-color: rgba(255,255,255,0.2) !important;
+        }
+
+        .filter-tab {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 25px;
+            max-width: 75px;
+            min-width: 75px;
+            box-shadow: none !important;
+        }
+    }
+}
+
+.component-tab-game
+{
+    background: var(--background-page);
+    padding: 10px 20px 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    @media screen and (max-width: 763px)
+    {
+        background: transparent;
+        padding: 0;
+        display: block;
+    }
+    .tab-game__filter
+    {
+        .filter-tab
+        {
+            display: inline-block;
+            margin-right:  20px;
+            padding-bottom: 2px;
+            color: var(--page-text);
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            position: relative;
+            &.active
+            {
+                color: var(--secondary-color);
+                &:before
+                {
+                    transform: scale(1);
+                }
+            }
+            &:before
+            {
+                @include transition(0.2s);
+                content: '';
+                background: var(--secondary-color);
+                width: 100%;
+                position: absolute;
+                height: 2px;
+                bottom: -12px;
+                transform: scale(0);
+            }
+        }
+        .filter-tab:hover
+        {
+            @include transition(0.2s);
+            color: var(--secondary-color);
+            &:before
+            {
+                @include transition(0.2s);
+                transform: scale(1);
+            }
+        }
+        @media screen and (max-width: 763px)
+        {
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+            grid-gap: 7px;
+            .filter-tab
+            {
+                padding-bottom: 0;
+                margin-right: 0;
+                background: var(--secondary-color);
+                border: 1px solid var(--secondary-color);
+                border-radius: 3px;
+                text-align: center;
+                color: var(--secondary-text);
+                font-size: 11px;
+                padding: 5px;
+                &:hover
+                {
+                    color: var(--c-white);
+                    border: 1px solid var(--secondary-color);
+                    background: var(--c-black);
+                }
+                &.active
+                {
+                    color: var(--c-white);
+                    border: 1px solid var(--secondary-color);
+                    background: var(--c-black);
+                }
+            }
+            .filter-tab:before
+            {
+                display: none;
+            }
+        }
+    }
+    .tabs-game__search
+    {
+        margin-left: auto;
+        padding-left: 12px;
+        position: relative;
+        .btn-search
+        {
+            cursor: pointer;
+            i
+            {
+                color: #fff;
+                cursor: pointer
+            }
+        }
+        .search-box
+        {
+            display: none;
+            position: absolute;
+            right: -13px;
+            top: 44px;
+            z-index: 999;
+            padding: 10px;
+            border-top: 3px solid var(--secondary-color);
+            background: var(--background-page);
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.20);
+            border-radius: 3px;
+
+            input
+            {
+                min-width: 300px;
+                border-radius: 3px;
+                font-size: 13px;
+                padding: 6px 10px;
+                border: 0;
+                font-weight: 600;
+                &:focus
+                {
+                    box-shadow: none;
+                    border-color: var(--secondary-color);
+                }
+            }
+
+            &:before
+            {
+                content: '';
+                position: absolute;
+                top: -16px;
+                right: 8px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 13px 13px 13px;
+                border-color: transparent transparent var(--secondary-color) transparent;
+            }
+        }
+        @media screen and (max-width: 425px)
+        {
+            display: none;
+        }
+    }
+}

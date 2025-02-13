@@ -1,0 +1,58 @@
+.main-content
+{
+    // @include bgBody();
+    // min-height: 86vh;
+}
+
+@font-face {
+	font-family: advanced_dot_digital-7regular;
+	src: url(../../../custom/font/advanced_dot_digital-7-webfont.woff2) format('woff2'),  url(../../../custom/font/advanced_dot_digital-7-webfont.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body
+{
+	margin-bottom: 0 !important;
+	font-family: 'Chakra Petch', sans-serif;
+	background-color: #262A3B;
+}
+
+a
+{
+	text-decoration: none !important;
+}
+
+button
+{
+	outline: 0 !important;
+	cursor: pointer;
+}
+
+select
+{
+	outline: 0;
+	cursor: pointer;
+	border: 1px solid #aeaeae;
+}
+
+input
+{
+	outline: 0;
+	border: 1px solid #aeaeae;
+}
+
+textarea
+{
+	outline: 0;
+	border: 1px solid #aeaeae;
+}
+
+img {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.fi {
+	display: flex;
+}

@@ -1,0 +1,57 @@
+$header-color: #151720;
+$navbar-color: #262A3B;
+$primary-color: #151720;
+$secondary-color: #158FEA;
+$lottery-color: #200E45;
+$footer-color: #262A3B;
+$jackpot-color: #151720;
+
+$header-text: #ffffff;
+$navbar-text: #ffffff;
+$jackpot-text: #ffffff;
+$primary-text: #ffffff;
+$secondary-text: #ffffff;
+$lottery-text: #ffffff;
+$footer-text: #ffffff;
+
+$c-white: #ffffff;
+$c-black: #0c0c0c;
+$c-grey: #181818;
+
+$background-theme: url(../../2/img/header/bod.jpg);
+$jackpot-theme: url(../../custom/img/header/jackpot.gif);
+
+$background-page: #151720;
+$page-text: #ffffff;
+
+$error: orange;
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --header-color: #{$header-color};
+    --navbar-color: #{$navbar-color};
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --lottery-color: #{$lottery-color};
+    --footer-color: #{$footer-color};
+    --jackpot-color: #{$jackpot-color};
+
+    --header-text: #{$header-text};
+    --navbar-text: #{$navbar-text};
+    --jackpot-text: #{$jackpot-text};
+    --primary-text: #{$primary-text};
+    --secondary-text: #{$secondary-text};
+    --lottery-text: #{$lottery-text};
+    --footer-text: #{$footer-text};
+
+    --c-white: #{$c-white};
+    --c-black: #{$c-black};
+    --c-grey: #{$c-grey};
+
+    --background-theme: #{$background-theme};
+    --jackpot-theme: #{$jackpot-theme};
+
+    --background-page: #{$background-page};
+    --page-text: #{$page-text};
+}

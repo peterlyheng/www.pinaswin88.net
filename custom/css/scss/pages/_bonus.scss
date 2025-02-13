@@ -1,0 +1,222 @@
+.bonus {
+    .component-tab-content {
+        background: transparent;
+
+        .bonus-header {
+            font-size: 22px;
+            color: var(--page-text);
+            font-weight: 700;
+        }
+
+        .referral-link {
+            font-size: 14px;
+            color: var(--page-text);
+            font-weight: 600;
+            margin-bottom: 10px;
+
+            span {
+                color: var(--secondary-color);
+                margin-left: 5px;
+            }
+
+            .btn-custom-sm
+            {
+                .spinner-border {
+                    color: var(--secondary-text);
+                }
+            }
+
+            @media screen and (max-width: 425px) {
+                flex-wrap: wrap;
+
+                span {
+                    margin-left: 0;
+                    margin-right: 5px;
+                }
+
+                .btn-custom-sm {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+
+        .bonus-form {
+            .form-group {
+                margin-bottom: 0;
+
+                label {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    color: var(--page-text);
+                }
+
+                input {
+                    width: 100%;
+                    border-radius: 3px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    padding: 8px 12px;
+                }
+
+                select {
+                    width: 100%;
+                    border-radius: 3px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 6px 6px;
+                    border: 0;
+                }
+
+                .bootstrap-select {
+                    .dropdown-toggle {
+                        padding: 8px 12px;
+
+                        .filter-option-inner-inner {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        .inner {
+                            max-height: 220px;
+                        }
+                        
+                        .dropdown-item {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .btn-see-report {
+                    width: 100%;
+                }
+            }
+        }
+
+        .point-top {
+            .point-img {
+                img {
+                    width: 100%;
+                    max-height: 350px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    object-fit: contain;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .point-form {
+                padding: 10px;
+                color: var(--page-text);
+                background: var(--background-page);
+                // border: 2px solid var(--secondary-color);
+                border-radius: 15px;
+
+                .point-form__title {
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 25px;
+                    margin-bottom: 15px;
+                }
+
+                .point-form__holder {
+                    margin-bottom: 10px;
+                    background: #32374E;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    width: 100%;
+                    margin: auto auto 10px;
+                    border-radius: 5px;
+
+                    .point-form__item {
+                        font-size: 14px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        border: 0;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .point-form__button {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+
+        .point-terms {
+            margin-top: 30px;
+            // border: 2px solid var(--secondary-color);
+            border-radius: 15px;
+
+            .terms-header {
+                background: var(--secondary-color);
+                font-size: 18px;
+                font-weight: 600;
+                padding: 10px 20px;
+                color: var(--secondary-text);
+                border-radius: 15px 15px 0 0;
+            }
+
+            .terms-content {
+                background: var(--background-page);
+                padding: 20px;
+                color: var(--page-text);
+                border-radius: 0 0 15px 15px;
+
+                p {
+                    font-size: 14px;
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: 100% !important;
+                }
+    
+                table {
+                    color: var(--page-text);
+                }
+            }
+        }
+
+        .point-bottom {
+            margin-top: 30px;
+
+            .point-bottom__title {
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                color: var(--c-white);
+                margin-bottom: 10px;
+            }
+
+            .table-transaksi {
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .bonus-content {
+            background: var(--background-page);
+            // border: 2px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 15px;
+        }
+
+        .bonus-referral {
+            background: var(--background-page);
+            // border: 2px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 15px;
+        }
+
+        .bonus-turnover {
+            background: var(--background-page);
+            // border: 2px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 15px;
+        }
+    }
+}

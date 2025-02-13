@@ -1,0 +1,239 @@
+.slot-game
+{
+	.slot-game__container
+	{
+		.game__title{
+			h3{	
+				word-wrap: break-word;
+				padding: 0.5em;
+				margin: auto;
+				margin-bottom: 0.5em;
+				background: var(--background-page);
+				color: var(--page-text);
+				font-size: 20px;
+				text-align: center;
+				border-radius: 5px;
+				font-weight: 700;
+				max-width: 300px;
+			}
+		}
+
+		.slot-game-header {
+			margin-bottom: 15px;
+			display: flex;
+			align-items: center;
+			grid-gap: 10px;
+			color: var(--c-white);
+
+			h3 {
+				margin-bottom: 0;
+				font-weight: 700;
+				margin-right: 10px;
+			}
+
+			.mobile-page-header {
+				margin-bottom: 0;
+			}
+
+			.slot-game__search-cont {
+				margin-left: auto;
+			}
+
+			@media screen and (max-width: 425px) {
+				flex-direction: column;
+				margin-bottom: 0;
+
+				.slot-game__search-cont {
+					margin: auto;
+				}
+			}
+		}
+
+		.slot-game-list
+		{
+			margin-top: 20px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+			grid-gap: 10px;
+
+			.slot-game {
+				padding: 0;
+			}
+
+			.slot-game-item {
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+				display: none;
+
+				&.show {
+					display: block;
+				}
+
+				.slot-game-img {
+					background: var(--primary-color);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					overflow: hidden;
+					border-radius: 15px 15px 0 0;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+
+				.games-bottom {
+					background: var(--primary-color);
+					color: var(--primary-text);
+					font-size: 14px;
+					display: grid;
+					grid-gap: 5px;
+					grid-template-columns: 1fr 36px;
+					padding: 5px 8px;
+					font-weight: 600;
+
+					.bottom-info {
+						text-align: left;
+						line-height: 1;
+						overflow: hidden;
+
+						.name {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin-bottom: 3px;
+							padding-bottom: 2px;
+						}
+
+						.info-provider {
+							color: var(--secondary-color);
+							font-size: 10px;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+
+					.bottom-rtp {
+						margin-left: auto;
+						background: var(--secondary-color);
+						border-radius: 5px;
+						padding: 3px;
+						line-height: 1;
+
+						.rtp-title {
+							font-size: 11px;
+						}
+
+						.rtp-percent {
+							font-size: 14px;
+						}
+					}
+
+					&.popular-bottom {
+						display: block;
+					}
+				}
+
+				.hover-play {
+					background: rgba(0,0,0,0.5);
+					position: absolute;
+					border-radius: 15px 15px 0 0;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transform: scale(0);
+					cursor: pointer;
+					@include transition(0.2s);
+
+					.fas {
+						color: var(--c-white);
+						font-size: 20px;
+						background: rgba(255,255,255,0.4);
+						border-radius: 50px;
+						width: 50px;
+						height: 50px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+
+				.slot-game-tag {
+					color: var(--c-white);
+					padding: 3px 7px;
+					border-radius: 50px;
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					font-weight: 600;
+					z-index: 1;
+
+					.info
+					{
+						font-size: 10px;
+						i
+						{
+							margin-right: 3px;
+						}
+					}
+
+					&.new
+					{
+						background: linear-gradient(to bottom, #189AD3 0%, #005073 100%);
+					}
+					&.hot
+					{
+						background: linear-gradient(to bottom, #FD9346 0%, #ff6200 100%);
+					}
+				}
+
+				&:hover {
+					.hover-play {
+						transform: scale(1);
+						@include transition(0.2s);
+					}
+				}
+			}
+
+			@media screen and (max-width: 1080px) {
+				grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+				.games-bottom {
+					font-size: 12px !important;
+				}
+
+				.bottom-rtp {
+
+					.rtp-title {
+						font-size: 10px !important;
+					}
+
+					.rtp-percent {
+						font-size: 11px !important;
+					}
+				}
+			}
+
+			@media screen and (max-width: 425px) {
+				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+				.slot-game-img {
+					img {
+						height: 90px !important;
+					}
+				}
+			}
+		}
+	}
+}

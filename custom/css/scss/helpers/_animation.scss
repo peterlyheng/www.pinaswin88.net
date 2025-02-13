@@ -1,0 +1,158 @@
+#front-themes-color {
+    color: $primary-color;
+}
+
+@keyframes blinkAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-3px)
+    }
+
+    50% {
+        transform: translateY(3px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+
+@keyframes floating-icon-change {
+
+    0%,
+    6% {
+        -webkit-transform: translateX(11px);
+        transform: translateX(11px);
+    }
+
+    12%,
+    21% {
+        -webkit-transform: translateX(-51px);
+        transform: translateX(-51px);
+    }
+
+    27%,
+    36% {
+        -webkit-transform: translateX(-113px);
+        transform: translateX(-113px);
+    }
+
+    42%,
+    51% {
+        -webkit-transform: translateX(-173px);
+        transform: translateX(-173px);
+    }
+
+    57%,
+    66% {
+        -webkit-transform: translateX(-236px);
+        transform: translateX(-236px);
+    }
+
+    72%,
+    81% {
+        -webkit-transform: translateX(-302px);
+        transform: translateX(-302px);
+    }
+
+    87%,
+    100% {
+        -webkit-transform: translateX(-367px);
+        transform: translateX(-367px);
+    }
+}
+
+@keyframes floating-show-stat {
+
+    0%,
+    20% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    21%,
+    84% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    85%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes floating-show-icons {
+
+    0%,
+    20% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    21%,
+    84% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    85%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes progress-animation {
+    from {
+        left: -60%;
+        width: 50%;
+    }
+
+    to {
+        left: 110%;
+        width: 50%;
+    }
+}
+
+@keyframes steam {
+    20% {
+        filter: blur(5px);
+        opacity: 1;
+    }
+
+    50% {
+        filter: blur(10px);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(15px);
+        opacity: 0;
+    }
+}
+
+@keyframes new-game-blinker {
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes beat{
+	to { transform: scale(1.1); }
+}

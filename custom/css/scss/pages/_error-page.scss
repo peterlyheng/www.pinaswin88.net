@@ -1,0 +1,33 @@
+.error-page {
+    background: transparent;
+    color: $c-white;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    padding: 15px;
+
+    h1 {
+        font-size: 80px;
+        color: var(--secondary-color);
+		font-weight: 600;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-custom {
+        margin-top: 50px;
+		min-width: 200px;
+    }
+}

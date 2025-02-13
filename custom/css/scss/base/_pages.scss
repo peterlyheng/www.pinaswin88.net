@@ -1,0 +1,173 @@
+.register {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.home{
+    padding: 100px 0 10px;
+
+    @media screen and (max-width: 800px) {
+        padding: 10px 0;
+    }
+}
+
+.forgot-password {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.news {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.post {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.promo-content {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.promo {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.memo {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+
+    &__container {
+        margin-bottom: 100px;
+    }
+}
+
+.memo-view {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.feedback {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.help {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.result {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.lottery {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.game {
+    padding: 120px 0 100px;
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.slot-game {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.casino-game {
+    padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.freebet {
+	padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 20px 0;
+    }
+}
+
+.transaksi {
+	padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.profile{ 
+	padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.bonus{ 
+	padding: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 0 20px;
+    }
+}
+
+.page-form {
+    background: var(--background-page);
+    color: var(--page-text);
+    padding: 20px;
+    border-radius: 15px;
+
+    @media screen and (max-width: 800px) {
+        padding: 10px;
+    }
+}
